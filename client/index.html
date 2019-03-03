@@ -62,9 +62,12 @@
     
    <script src="app/domain/negociacao/Negociacao.js"></script> 
   <script>
-        n1 = new Negociacao(new Date(), 5, 700)
-        volume = n1.valor *  n1.quantidade 
-        console.log(volume)
+        n1 = new Negociacao(new Date(),6, 1000)
+        
+       
+        n1._quantidade = 200
+        console.log(Object.isFrozen(n1))
+        console.log(n1._quantidade)
   </script>
 
 </body>
