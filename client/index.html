@@ -62,12 +62,12 @@
     
    <script src="app/domain/negociacao/Negociacao.js"></script> 
   <script>
-        n1 = new Negociacao(new Date(),6, 1000)
+      var hoje = new Date()
+        n1 = new Negociacao(hoje,5, 700)
+        console.log(n1.data)
+        hoje.setDate(11)
+        console.log(n1.data)        
         
-       
-        n1._quantidade = 200
-        console.log(Object.isFrozen(n1))
-        console.log(n1._quantidade)
   </script>
 
 </body>
