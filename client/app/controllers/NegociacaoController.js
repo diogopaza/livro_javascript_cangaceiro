@@ -1,16 +1,28 @@
 class NegociacaoController{
 
+    constructor(){
+
+        this._inputData = document.getElementById('data')
+        this._inputQuantidade = document.getElementById('quantidade')
+        this._inputValor = document.getElementById('valor')   
+      
+    }
+    
 
     adiciona(event){
        
         event.preventDefault()
-        let inputData = document.getElementById('data')
-        let inputQuantidade = document.getElementById('quantidade')
-        let inputValor = document.getElementById('valor')
-        console.log(typeof(inputData.value))
-        console.log(inputQuantidade.value)
-        console.log(inputValor.value)
+        console.log('entrei controller')
+        /*
+        let negociacao = new Negociacao(
+            this._inputData.nodeValue,
+            parseInt(this._inputQuantidade.value),
+            parseFloat(this._inputValor)
+        )
 
+        console.log(negociacao)
+        */
+       console.log( typeof(this._inputData.value))
     }
 
 }
