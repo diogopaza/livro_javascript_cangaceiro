@@ -13,16 +13,25 @@ class NegociacaoController{
        
         event.preventDefault()
         console.log('entrei controller')
-        /*
+        
+        let data = new Date(...
+            this._inputData.value
+            .split('-')
+            .map(( item, indice ) => item - indice % 2
+                
+           ))
+
         let negociacao = new Negociacao(
-            this._inputData.nodeValue,
+            data,
             parseInt(this._inputQuantidade.value),
-            parseFloat(this._inputValor)
+            parseFloat(this._inputValor.value)
         )
 
         console.log(negociacao)
-        */
-       console.log( typeof(this._inputData.value))
+        
+       
+      
+       
     }
 
 }
