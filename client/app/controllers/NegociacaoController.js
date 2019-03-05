@@ -4,7 +4,8 @@ class NegociacaoController{
 
         this._inputData = document.getElementById('data')
         this._inputQuantidade = document.getElementById('quantidade')
-        this._inputValor = document.getElementById('valor')   
+        this._inputValor = document.getElementById('valor') 
+        this._negociacoes = new Negociacoes()  
       
     }
     
@@ -15,7 +16,7 @@ class NegociacaoController{
         
         //classe com metodos estáticos não precisa instanciar a classe
         //x = new DateConverter()
-            console.log(this._inputData.value)
+            
         
 
         let negociacao = new Negociacao(
@@ -23,8 +24,9 @@ class NegociacaoController{
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
         )
-        
-       console.log(negociacao.data)
+
+        this._negociacoes.adiciona( negociacao )
+       console.log( this._negociacoes.paraArray())
         
        
       
