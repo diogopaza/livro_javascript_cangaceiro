@@ -12,29 +12,19 @@ class NegociacaoController{
     adiciona(event){
        
         event.preventDefault()
-       
         
-        let data = new Date(...
-            this._inputData.value
-            .split('-')
-            .map(( item, indice ) => item - indice % 2
-                
-           ))
-
-          
+        //classe com metodos estáticos não precisa instanciar a classe
+        //x = new DateConverter()
+            console.log(this._inputData.value)
         
 
         let negociacao = new Negociacao(
-            data,
+            DateConverter.paraData( this._inputData.value ),
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
         )
-
-        let diaMesAno = negociacao.data.getDate()
-            + '/'+ ( negociacao.data.getMonth() + 1 )
-            +'/'+ negociacao.data.getFullYear()
-
-        console.log(diaMesAno)
+        
+       console.log(negociacao.data)
         
        
       
