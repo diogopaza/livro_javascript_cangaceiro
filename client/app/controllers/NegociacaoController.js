@@ -12,7 +12,7 @@ class NegociacaoController{
     adiciona(event){
        
         event.preventDefault()
-        console.log('entrei controller')
+       
         
         let data = new Date(...
             this._inputData.value
@@ -21,13 +21,20 @@ class NegociacaoController{
                 
            ))
 
+          
+        
+
         let negociacao = new Negociacao(
             data,
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
         )
 
-        console.log(negociacao)
+        let diaMesAno = negociacao.data.getDate()
+            + '/'+ ( negociacao.data.getMonth() + 1 )
+            +'/'+ negociacao.data.getFullYear()
+
+        console.log(diaMesAno)
         
        
       
