@@ -6,8 +6,13 @@ class NegociacaoController{
         this._inputQuantidade = document.getElementById('quantidade')
         this._inputValor = document.getElementById('valor') 
         this._negociacoes = new Negociacoes()  
+        this._negociacoesView = new NegociacoesView('negociacoes')
+        
+        this._negociacoesView.update(this._negociacoes)
       
     }
+
+
     
 
     adiciona(event){
@@ -23,8 +28,9 @@ class NegociacaoController{
 
         this._negociacoes.adiciona( this._criarNegociacao() )
         
-        console.log(this._negociacoes.paraArray())
-       this._limpaFormulario()
+     
+        this._negociacoesView.update(this._negociacoes)
+        this._limpaFormulario()
       
        
     }
